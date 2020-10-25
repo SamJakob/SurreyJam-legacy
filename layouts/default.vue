@@ -1,17 +1,15 @@
 <template>
-  <div>
-    <Nuxt />
-  </div>
+    <div>
+        <Nuxt/>
+    </div>
 </template>
 
 <style lang="scss">
 html, body {
-  background: #2A2742;
+    background: #2A2742;
 }
 </style>
 
 <script>
-export default {
-
-}
+export default {}
 </script>
