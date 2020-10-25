@@ -1,7 +1,8 @@
 module.exports = {
     apps: [{
         name: "SurreyJam",
-        script: 'index.js',
+        script: 'npm',
+        args: 'start',
         watch: '.'
     }],
 
