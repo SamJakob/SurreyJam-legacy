@@ -1,41 +1,63 @@
 <template>
-    <div class='page-decoration'>
-        <h5>{{ title }}</h5>
-        <h1>{{ bigTitle }}</h1>
-        <slot></slot>
+    <div class="page-decoration">
+        <h2>{{ category }}</h2>
+        <h1>{{ title }}</h1>
+
+        <div class="page-content">
+            <slot></slot>
+        </div>
     </div>
 </template>
 <style lang="scss" scoped>
     $breakpoint-margin: 500px;
+
     .page-decoration {
-        
-        margin: 20px;
+
+        margin: 120px 20px 20px;
 
         @media (min-width: $breakpoint-margin) {
-            margin: 100px;
+            margin: 120px 100px 100px;
         }
 
-        h5 {
+        h2 {
             text-transform: uppercase;
             color: #9894B6;
-            font-size: 24px;
+            font-size: 14pt;
             font-weight: 800;
             letter-spacing: 2px;
+            line-height: 14pt;
+
+            padding-bottom: 5px;
         }
+
         h1 {
             color: white;
-            font-size: 64px;
+            font-size: 42pt;
+            line-height: 42pt;
             font-weight: 700;
+
+            // letter-spacing: 3px;
         }
     }
 </style>
 <script>
 export default {
-    data() {
-        return {
-            title: 'New Page',
-            bigTitle: 'New Page'
+
+    data: () => ({
+
+    }),
+
+    props: {
+        category: {
+            required: true,
+            type: String
+        },
+
+        title: {
+            required: true,
+            type: String
         }
     }
+
 }
 </script>

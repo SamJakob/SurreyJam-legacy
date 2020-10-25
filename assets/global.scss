@@ -15,7 +15,7 @@ For body text (i.e. copy) use .font-monospace or the default font.
     letter-spacing: 0.05em;
 }
 
-html {
+html, body {
     color: white;
-    font-family: 'Montserrat' sans-serif;
+    font-family: "Montserrat", sans-serif;
 }

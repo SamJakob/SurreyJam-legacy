@@ -41,7 +41,7 @@ header {
         height: 100vh;
         width: 100vw;
         background-image: url("~assets/images/rays.png");
-        background-position: center 20%;
+        background-position: center 0;
         background-size: cover;
         background-repeat: no-repeat;
     }

@@ -1,3 +1,5 @@
+const SurreyJamConfig = require('./config/app');
+
 export default {
     // Global page headers (https://go.nuxtjs.dev/config-head)
     head: {
@@ -42,11 +44,21 @@ export default {
     // Axios module configuration (https://go.nuxtjs.dev/config-axios)
     axios: {},
 
+    // Loading module configuration (https://nuxtjs.org/api/configuration-loading/)
+    loading: {
+        color: '#5BDEFF'
+    },
+
     // Build Configuration (https://go.nuxtjs.dev/config-build)
     build: {},
 
     // Server Configuration
     server: {
         port: 2140
+    },
+
+    // SurreyJam App Configuration
+    env: {
+        app: SurreyJamConfig
     }
 }
