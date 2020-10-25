@@ -42,6 +42,8 @@ header {
         width: 100vw;
         background-image: url("~assets/images/rays.png");
         background-position: center 20%;
+        background-size: cover;
+        background-repeat: no-repeat;
     }
 
     div:not(.in-bg) {

@@ -17,6 +17,7 @@ body {
     $dot-color: lighten($bg-color, 40%);
     $dot-size: 4px;
     $dot-space: 35px;
+
     &::after {
         content: '';
         background:

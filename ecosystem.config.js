@@ -1,7 +1,8 @@
 module.exports = {
     apps: [{
         name: "SurreyJam",
-        script: 'index.js',
+        script: 'npm',
+        args: 'start',
         watch: '.'
     }],
 
@@ -12,7 +13,7 @@ module.exports = {
         production: {
             // This will need to be configured in your ~/.ssh/config
             host: 'surreyjamhost',
-            repo: 'https://github.com/SamJakob/SurreyJam.git',
+            repo: 'git@github.com:SamJakob/SurreyJam.git',
 
             user: 'surreyjam',
             ref: 'origin/master',
