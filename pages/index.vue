@@ -8,11 +8,25 @@
                 <p class="font-monospace">Welcome to</p>
                 <h1 class="font-monospace-packed">SurreyJam</h1>
             </div>
+	    <Countdown class="countdown"> </Countdown>
+
 
         </header>
 
     </div>
 </template>
+
+<script>
+import { Countdown } from "~/.nuxt/components";
+
+export default {
+
+    components: {
+        Countdown
+    }
+
+}
+</script>
 
 <style lang="scss" scoped>
 header {
@@ -69,6 +83,11 @@ header {
             font-size: 21pt;
             line-height: 21pt
         }
+    }
+
+    .countdown {
+	    font-size: 21pt;
+	    padding-top: 20pt;
     }
 
 }
