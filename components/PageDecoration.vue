@@ -8,7 +8,7 @@
         </div>
     </div>
 </template>
-<style lang="scss" scoped>
+<style lang="scss">
     $breakpoint-margin: 500px;
 
     .page-decoration {
@@ -38,6 +38,10 @@
 
             // letter-spacing: 3px;
         }
+    }
+
+    .page-content {
+        margin-top: 60px;
     }
 </style>
 <script>
