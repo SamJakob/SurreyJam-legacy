@@ -8,8 +8,10 @@
                 <p class="font-monospace">Welcome to</p>
                 <h1 class="font-monospace-packed">SurreyJam</h1>
             </div>
-	    <Countdown class="countdown"> </Countdown>
 
+            <br><br>
+
+            <Countdown class="countdown"/>
 
         </header>
 
@@ -17,7 +19,7 @@
 </template>
 
 <script>
-import { Countdown } from "~/.nuxt/components";
+import Countdown from "~/components/Countdown";
 
 export default {
 
