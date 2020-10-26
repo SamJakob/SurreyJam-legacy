@@ -2,7 +2,7 @@
     <div class="container">
 
         <header>
-            <div class="rays-bg in-bg"/>
+            <div class="bg-rays in-bg"/>
 
             <div class="welcome">
                 <p class="font-monospace">Welcome to</p>
@@ -47,7 +47,7 @@ header {
 
     color: white;
 
-    .rays-bg {
+    .bg-rays {
         position: absolute;
         top: 0;
         left: 0;
@@ -56,14 +56,32 @@ header {
 
         height: 100vh;
         width: 100vw;
-        background-image: url("~assets/images/rays.png");
-        background-position: center 0;
-        background-size: cover;
-        background-repeat: no-repeat;
+        background: linear-gradient(126.49deg, #59E0FF -17.1%, #AC75F5 81.2%);
+        clip-path: polygon(-30% 110%, 150% 4%, 73% -15%);
+
+        opacity: 0.7;
+        animation: rays-light-wave 10s ease-in-out infinite alternate;
+
+        transform: translateZ(0.001px);
+
+        &.alt {
+            animation: rays-light-wave-alt 6s ease-in-out infinite alternate;
+            transform: translateZ(0.001px) scaleX(-1);
+        }
+    }
+
+    @keyframes rays-light-wave {
+        0% { opacity: 0.7; clip-path: polygon(-30% 110%, 150% 4%, 73% -15%); }
+        60% { opacity: 0.2; clip-path: polygon(-30% 110%, 150% -24%, 73% -30%); }
+        80% { opacity: 0.4; clip-path: polygon(-30% 110%, 150% 12%, 73% -8%); }
     }
 
     div:not(.in-bg) {
         z-index: 10;
+    }
+
+    .in-bg {
+        z-index: 1;
     }
 
     .welcome {

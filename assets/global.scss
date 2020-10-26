@@ -1,11 +1,14 @@
-/* Global Stylesheet */
-@import '~assets/fonts/fonts.scss';
+/* SurreyJam Global Stylesheet */
 
+/* Imports */
+    @import '~assets/fonts/fonts.scss';
 
-/*
-This should be used for logos or large text where readability is unlikely to be an issue.
-For body text (i.e. copy) use .font-monospace or the default font.
- */
+/* Variables */
+// Colors are now declared in tailwind.config.js
+
+/* Global Styles */
+// This should be used for logos or large text where readability is unlikely to be an issue.
+// For body text (i.e. copy) use .font-monospace or the default font.
 .font-monospace-packed {
     font-family: "Fairune UI", "Courier New", monospace;
 }
@@ -16,6 +19,8 @@ For body text (i.e. copy) use .font-monospace or the default font.
 }
 
 html, body {
+    @apply bg-background;
+    overflow-x: hidden; // Horizontal scrollbars should never happen
     color: white;
     font-family: "Montserrat", sans-serif;
 }

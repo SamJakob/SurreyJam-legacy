@@ -3,37 +3,29 @@
         <Navigation />
 
         <Nuxt />
+        <div class="bg-dots" />
     </div>
 </template>
 
 <style lang="scss">
-body {
-    // Colors
-    $bg-color: #2A2742;
 
-    position: relative;
-    background: $bg-color;
-    overflow-x: hidden; // Horizontal scrollbars should never happen
-
+.bg-dots {
     // Dotted background (adapted from https://codepen.io/edmundojr/pen/xOYJGw)
-    $dot-color: lighten($bg-color, 40%);
+    $dot-color: theme('colors.accent');
     $dot-size: 4px;
     $dot-space: 35px;
 
-    &::after {
-        content: '';
-        background:
-            linear-gradient(90deg, $bg-color ($dot-space - $dot-size), transparent 1%) center,
-            linear-gradient($bg-color ($dot-space - $dot-size), transparent 1%) center,
-            $dot-color;
-        background-size: $dot-space $dot-space;
+    background:
+        linear-gradient(90deg, theme('colors.background') ($dot-space - $dot-size), transparent 1%) center,
+        linear-gradient(theme('colors.background') ($dot-space - $dot-size), transparent 1%) center,
+        $dot-color;
+    background-size: $dot-space $dot-space;
 
-        position: absolute;
-        left: 65vw;
-        top: 70vh;
-        right: 0; bottom: 0;
-        z-index: -100; // Everything should be drawn over this.
-    }
+    position: absolute;
+    left: 65vw;
+    top: 70vh;
+    right: 0; bottom: 0;
+    z-index: 0; // Everything should be drawn over this.
 }
 </style>
 
