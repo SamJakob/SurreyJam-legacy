@@ -46,7 +46,7 @@ export default {
 
     created () {
         this.updateTimeRemaining();
-        this.updateInterval = setInterval(this.updateTimeRemaining, 100);
+        this.updateInterval = setInterval(this.updateTimeRemaining, 1000);
     },
 
     beforeDestroy () {
